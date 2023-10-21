@@ -17,7 +17,7 @@ namespace Roguelite
 	    [Inject]
 	    private void Construct(ICharacterFactory characterFactory)
 	    {
-		   // characterFactory.CreateEnemy(transform.position);
+		   characterFactory.CreateEnemy(transform.position);
 	    }
     }
 }

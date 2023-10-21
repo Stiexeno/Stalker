@@ -2,8 +2,8 @@ namespace Roguelite
 {
     public interface ICollidingViewRegister
     {
-	    IView Register(int instanceId, IView viewController);
-	    void Unregister(int instanceId, IView @object);
-	    IView Take(int key);
+	    IEntityView Register(int instanceId, IEntityView entityViewController);
+	    void Unregister(int instanceId, IEntityView @object);
+	    IEntityView Take(int key);
     }
 }

@@ -10,7 +10,7 @@ namespace Roguelite
 	
     	// Private fields
 	    
-	    private List<IView> views = new List<IView>();
+	    private List<IEntityView> views = new List<IEntityView>();
 	
     	// Properties
 	
@@ -24,12 +24,12 @@ namespace Roguelite
 		    }
 	    }
 
-	    public void RegisterView(IView value)
+	    public void RegisterView(IEntityView value)
 	    {
 		    views.Add(value);
 	    }
 	    
-	    public void RemoveView(IView value)
+	    public void RemoveView(IEntityView value)
 	    {
 		    views.Remove(value);
 	    }

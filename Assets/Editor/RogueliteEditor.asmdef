@@ -2,16 +2,18 @@
     "name": "RogueliteEditor",
     "rootNamespace": "",
     "references": [
-        "GUID:b6cf813a824e4f64b9e05394cc40e567"
+        "GUID:5a2932c8cd993da43a9124226e80cc3d",
+        "GUID:f7629356a678bc04f995a5ea0395cc55",
+        "GUID:613783dc1674e844b87788ea74ede0f6"
     ],
-    "includePlatforms": [],
-    "excludePlatforms": [
+    "includePlatforms": [
         "Editor"
     ],
+    "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": true,
+    "overrideReferences": false,
     "precompiledReferences": [
-        "DOTweenEditor.dll"
+        "DemiEditor.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],

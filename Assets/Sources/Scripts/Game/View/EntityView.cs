@@ -7,7 +7,7 @@ using SF = UnityEngine.SerializeField;
 
 namespace Roguelite
 {
-	public class EntityView : MonoBehaviour, IView
+	public class EntityView : MonoBehaviour, IEntityView
 	{
 		// Serialized fields
 

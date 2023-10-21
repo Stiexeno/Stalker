@@ -6,24 +6,24 @@ namespace Roguelite
 {
 	public class CharacterFactory : AbstractEntityFactory, ICharacterFactory
 	{
-		private PlayerComponent playerBehaviour2;
-		private EnemyBehaviour2 enemyBehaviour2;
+		private PlayerComponent playerPrefab;
+		private EnemyComponent enemyPrefab;
 
 		public CharacterFactory(Contexts contexts, IAssets assets) : base(contexts, assets)
 		{
-			playerBehaviour2 = assets.GetPrefab<PlayerComponent>(Assets.Characters.Player);
-			//enemyBehaviour2 = assets.GetPrefab<EnemyBehaviour2>(Assets.Enemy);
+			playerPrefab = assets.GetPrefab<PlayerComponent>(Assets.Characters.Player);
+			enemyPrefab = assets.GetPrefab<EnemyComponent>(Assets.Characters.Enemy);
 		}
 
 		public EntityView CreatePlayer(Vector3 at)
 		{
-			var player = CreateView(playerBehaviour2.gameObject, at);
+			var player = CreateView(this.playerPrefab.gameObject, at);
 			return player;
 		}
 		
 		public EntityView CreateEnemy(Vector3 at)
 		{
-			var enemy = CreateView(enemyBehaviour2.gameObject, at);
+			var enemy = CreateView(this.enemyPrefab.gameObject, at);
 			return enemy;
 		}
 	}

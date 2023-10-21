@@ -2,7 +2,7 @@
 {
 	public interface IViewService
 	{
-		void RemoveView(IView value);
-		void RegisterView(IView value);
+		void RemoveView(IEntityView value);
+		void RegisterView(IEntityView value);
 	}
 }

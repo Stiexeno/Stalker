@@ -4,22 +4,22 @@ namespace Roguelite
 {
 	public class CollidingViewRegister : ICollidingViewRegister
 	{
-		private Dictionary<int, IView> controllerByInstanceId = new();
+		private Dictionary<int, IEntityView> controllerByInstanceId = new();
 
-		public IView Register(int instanceId, IView viewController)
+		public IEntityView Register(int instanceId, IEntityView entityViewController)
 		{
-			controllerByInstanceId[instanceId] = viewController;
-			return viewController;
+			controllerByInstanceId[instanceId] = entityViewController;
+			return entityViewController;
 		}
 
-		public void Unregister(int instanceId, IView @object)
+		public void Unregister(int instanceId, IEntityView @object)
 		{
 			if (controllerByInstanceId.ContainsKey(instanceId))
 				controllerByInstanceId.Remove(instanceId);
 		}
 
-		public IView Take(int key) =>
-			controllerByInstanceId.TryGetValue(key, out IView behaviour)
+		public IEntityView Take(int key) =>
+			controllerByInstanceId.TryGetValue(key, out IEntityView behaviour)
 				? behaviour
 				: null;
 	}

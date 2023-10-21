@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using DG.DemiEditor;
-using Roguelite;
+using Framework.Editor;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using SF = UnityEngine.SerializeField;
 
-namespace Framework.Editor
+namespace Roguelite.Editor
 {
 	[CustomEditor(typeof(EntityView), true)]
 	public class ViewEditor : UnityEditor.Editor
 	{
 		// Private fields
 
-		private static Lazy<EditorSkin> _skin = new Lazy<EditorSkin>(() => new EditorSkin());
-		private static EditorSkin skin => _skin.Value;
+		private static Lazy<Framework.Editor.EditorSkin> _skin = new Lazy<Framework.Editor.EditorSkin>(() => new Framework.Editor.EditorSkin());
+		private static Framework.Editor.EditorSkin skin => _skin.Value;
 
 		private EntityView entityView;
 
@@ -55,7 +55,7 @@ namespace Framework.Editor
 					var labelRect = EditorGUILayout.GetControlRect(true);
 					EditorGUI.LabelField(labelRect, "Entity Components", EditorStyles.boldLabel);
 
-					var buttonRect = labelRect.AddX(labelRect.width).AddX(-skin.buttonWidth).SetWidth(skin.buttonWidth);
+					var buttonRect = EditorRectUtils.SetWidth(labelRect.AddX(labelRect.width).AddX(-skin.buttonWidth), skin.buttonWidth);
 
 					if (GUI.Button(buttonRect, "+", EditorStyles.miniButton))
 					{

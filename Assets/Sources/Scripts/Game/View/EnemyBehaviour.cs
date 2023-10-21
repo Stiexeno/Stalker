@@ -1,7 +1,7 @@
 using DG.Tweening;
 using Framework;
-using Framework.Bot.ECS;
 using Framework.Generated;
+using Roguelite.Bot;
 using UnityEngine;
 using UnityEngine.AI;
 using SF = UnityEngine.SerializeField;
@@ -13,7 +13,7 @@ namespace Roguelite
         // Serialized fields
         
         [SF] private NavMeshAgent agent;
-        [SF] private EcsAgent ecsAgent;
+        [SF] private ECSAgent ecsAgent;
         
         [SF] private Renderer renderer;
 
