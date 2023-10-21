@@ -46,7 +46,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FlashAmount: 0.209
+    - _FlashAmount: 0.299
     m_Colors:
     - _FlashColor: {r: 53.218246, g: 0.25103006, b: 0.25103006, a: 1}
   m_BuildTextureStacks: []

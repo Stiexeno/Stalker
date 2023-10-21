@@ -124,6 +124,7 @@ namespace Roguelite
 
 	    public void OnReloading(GameEntity entity)
 	    {
+		    //animancer.Play(reloadClip);
 	    }
     }
 }

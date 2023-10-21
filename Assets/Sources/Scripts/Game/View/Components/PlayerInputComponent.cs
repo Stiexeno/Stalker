@@ -15,8 +15,8 @@ namespace Roguelite
 
 	    // Properties
 	    
-	    public Vector2 LookDirection { get; private set; }
-	    public Vector2 Velocity { get; private set; }
+	    public Vector2 LookDirection { get; set; }
+	    public Vector2 Velocity { get; set; }
 	
     	//InputComponent
 	    

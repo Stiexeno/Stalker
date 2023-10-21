@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 119804169949611954}
   - component: {fileID: 2601957554219786299}
-  - component: {fileID: 6362966350600459716}
   - component: {fileID: 8174030328839072113}
   - component: {fileID: 5898570510826568606}
   - component: {fileID: 6135924354862144041}
@@ -18,6 +17,8 @@ GameObject:
   - component: {fileID: 5754380101727476081}
   - component: {fileID: 281671504496171190}
   - component: {fileID: 4366504621538438920}
+  - component: {fileID: 5840179115456102793}
+  - component: {fileID: -3194849788739861621}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -55,59 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db7a6e4f1e99b441b5c528813adc01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 0
---- !u!212 &6362966350600459716
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119804169949611957}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  team: 1
 --- !u!195 &8174030328839072113
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -191,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bba926acb8042439a309ae39b40092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 50
 --- !u!114 &281671504496171190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +167,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoRun: 0
   behaviourTree: {fileID: 11400000, guid: 05947aecea839bc4daab6ffc2fb6e4ee, type: 2}
+--- !u!114 &5840179115456102793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119804169949611957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cabc5a9852bc55408dc3256b6746b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 119804171945788269}
+--- !u!114 &-3194849788739861621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119804169949611957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea809dde06bd41c48941a86d20834941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementTransition:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Speed: 1
+    _Animations:
+    - {fileID: 7400000, guid: 7987679de1a1a3f4fb0bb6e4d8fdbdee, type: 2}
+    - {fileID: 7400000, guid: 7c5e86cbb744dc84595941976b0ae8f6, type: 2}
+    - {fileID: 7400000, guid: d779af2562c7bd940b09d27c760dcd21, type: 2}
+    - {fileID: 7400000, guid: 06b6f1d797a1c384c8349b63bc295e07, type: 2}
+    - {fileID: 7400000, guid: c7394da0e9c67414fa3f02c598236481, type: 2}
+    - {fileID: 7400000, guid: 2f573dd137af4cb428b366d3f64b3f92, type: 2}
+    - {fileID: 7400000, guid: 6f24ff98c726a6243bb87fcd39901cdb, type: 2}
+    - {fileID: 7400000, guid: a99b7fb403b254a4ca6ae148a5bcde91, type: 2}
+    _Speeds: []
+    _SynchronizeChildren: 
+    _Thresholds:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    _DefaultParameter: 0
+    _ExtrapolateSpeed: 1
 --- !u!1 &119804171945788271
 GameObject:
   m_ObjectHideFlags: 0

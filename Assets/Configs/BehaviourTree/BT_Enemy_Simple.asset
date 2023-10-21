@@ -15,7 +15,6 @@ MonoBehaviour:
   preOrderIndex: 2
   nodePosition: {x: -292, y: 290}
   status: 0
-  EditorStatus: 0
   children:
   - {fileID: 8923136194041605466}
   - {fileID: 8265403067773379634}
@@ -35,7 +34,6 @@ MonoBehaviour:
   preOrderIndex: 0
   nodePosition: {x: 0, y: 0}
   status: 0
-  EditorStatus: 0
   child: {fileID: 1109209989540322495}
   invert: 0
 --- !u!114 &-3633643284604580192
@@ -53,9 +51,8 @@ MonoBehaviour:
   preOrderIndex: 5
   nodePosition: {x: 218, y: 290}
   status: 0
-  EditorStatus: 0
   children:
-  - {fileID: 2001572907887549615}
+  - {fileID: 0}
   - {fileID: 873392341565932023}
   - {fileID: 7151410168465214406}
   currentChildIndex: 0
@@ -90,12 +87,12 @@ MonoBehaviour:
   - {fileID: 8923136194041605466}
   - {fileID: 8265403067773379634}
   - {fileID: -3633643284604580192}
-  - {fileID: 2001572907887549615}
+  - {fileID: 0}
   - {fileID: 873392341565932023}
   - {fileID: 7151410168465214406}
   blackboard: {fileID: -1623591228530053251}
   unusedNodes: []
-  panPosition: {x: 6, y: -353}
+  panPosition: {x: -81, y: -270}
   zoomPosition: {x: 1, y: 1}
   root: {fileID: -5469422950342547511}
 --- !u!114 &873392341565932023
@@ -113,7 +110,6 @@ MonoBehaviour:
   preOrderIndex: 7
   nodePosition: {x: 218, y: 480}
   status: 0
-  EditorStatus: 0
 --- !u!114 &1109209989540322495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,29 +125,10 @@ MonoBehaviour:
   preOrderIndex: 1
   nodePosition: {x: -38, y: 100}
   status: 0
-  EditorStatus: 0
   children:
   - {fileID: -7418319599595361006}
   - {fileID: -3633643284604580192}
   currentChildIndex: 0
---- !u!114 &2001572907887549615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc4124a843ebc94da52100f41cc389d, type: 3}
-  m_Name: HasAttackTarget
-  m_EditorClassIdentifier: 
-  preOrderIndex: 6
-  nodePosition: {x: 12, y: 480}
-  status: 0
-  EditorStatus: 0
-  child: {fileID: 0}
-  invert: 1
 --- !u!114 &7151410168465214406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +144,6 @@ MonoBehaviour:
   preOrderIndex: 8
   nodePosition: {x: 422, y: 478}
   status: 0
-  EditorStatus: 0
   duration: 5
 --- !u!114 &8265403067773379634
 MonoBehaviour:
@@ -184,7 +160,6 @@ MonoBehaviour:
   preOrderIndex: 4
   nodePosition: {x: -192, y: 480}
   status: 0
-  EditorStatus: 0
   child: {fileID: 0}
   invert: 0
 --- !u!114 &8923136194041605466
@@ -202,6 +177,5 @@ MonoBehaviour:
   preOrderIndex: 3
   nodePosition: {x: -398, y: 480}
   status: 0
-  EditorStatus: 0
   child: {fileID: 0}
   invert: 0

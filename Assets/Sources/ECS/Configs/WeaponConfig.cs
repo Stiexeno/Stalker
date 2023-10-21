@@ -8,7 +8,5 @@ namespace Roguelite
     {
 	    public int damage;
 	    public float fireRate;
-
-	    public WeaponBehaviour2 weaponPrefab;
     }
 }

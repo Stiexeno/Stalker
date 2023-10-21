@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using SF = UnityEngine.SerializeField;
 
 [RequireComponent(typeof(ECSAgent), typeof(NavMeshAgent))]
-public class AgentComponent : MonoBehaviour, IEntityComponent, IProcessable
+public class AgentComponent : MonoBehaviour, IEntityInputComponent, IProcessable
 {
     // Serialized fields
 	
@@ -14,8 +14,12 @@ public class AgentComponent : MonoBehaviour, IEntityComponent, IProcessable
 
 	private ECSAgent ecsAgent;
 	private NavMeshAgent agent;
-	
+	private GameEntity entity;
+
 	// Properties
+	
+	public Vector2 LookDirection { get; set;}
+	public Vector2 Velocity { get; set;}
 	
 	//AgentComponent
 	
@@ -23,6 +27,9 @@ public class AgentComponent : MonoBehaviour, IEntityComponent, IProcessable
 	{
 		agent = GetComponent<NavMeshAgent>();
 		ecsAgent = GetComponent<ECSAgent>();
+		
+		entity = entityView.Entity;
+		entity.AddAgent(agent);
 		
 		ecsAgent.Setup(entityView.Entity, entityView.Context);
 		agent.updateRotation = false;
@@ -32,5 +39,8 @@ public class AgentComponent : MonoBehaviour, IEntityComponent, IProcessable
 	public void Process(in float deltaTime)
 	{
 		ecsAgent.Process();
+		
+		LookDirection = entity.direction.value;
+		Velocity = entity.direction.value;
 	}
 }
