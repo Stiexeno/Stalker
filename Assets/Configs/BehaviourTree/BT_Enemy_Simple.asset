@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7418319599595361006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6006b11dc7a44656a78362ef0df73a71, type: 3}
+  m_Name: BTSequence
+  m_EditorClassIdentifier: 
+  preOrderIndex: 2
+  nodePosition: {x: -292, y: 290}
+  status: 0
+  EditorStatus: 0
+  children:
+  - {fileID: 8923136194041605466}
+  - {fileID: 8265403067773379634}
+  currentChildIndex: 0
+--- !u!114 &-5469422950342547511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0132302aed4367b0b192de96af39fa, type: 3}
+  m_Name: BTRoot
+  m_EditorClassIdentifier: 
+  preOrderIndex: 0
+  nodePosition: {x: 0, y: 0}
+  status: 0
+  EditorStatus: 0
+  child: {fileID: 1109209989540322495}
+  invert: 0
+--- !u!114 &-3633643284604580192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6006b11dc7a44656a78362ef0df73a71, type: 3}
+  m_Name: BTSequence
+  m_EditorClassIdentifier: 
+  preOrderIndex: 5
+  nodePosition: {x: 218, y: 290}
+  status: 0
+  EditorStatus: 0
+  children:
+  - {fileID: 2001572907887549615}
+  - {fileID: 873392341565932023}
+  - {fileID: 7151410168465214406}
+  currentChildIndex: 0
+--- !u!114 &-1623591228530053251
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb0b6a15873a804e8c5a6b61bec1e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a238fa2c107e748a556743d96e305c, type: 3}
+  m_Name: BT_Enemy_Simple
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5469422950342547511}
+  - {fileID: 1109209989540322495}
+  - {fileID: -7418319599595361006}
+  - {fileID: 8923136194041605466}
+  - {fileID: 8265403067773379634}
+  - {fileID: -3633643284604580192}
+  - {fileID: 2001572907887549615}
+  - {fileID: 873392341565932023}
+  - {fileID: 7151410168465214406}
+  blackboard: {fileID: -1623591228530053251}
+  unusedNodes: []
+  panPosition: {x: 6, y: -353}
+  zoomPosition: {x: 1, y: 1}
+  root: {fileID: -5469422950342547511}
+--- !u!114 &873392341565932023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d0c951fa776cd4cb8e3dc90d51d878, type: 3}
+  m_Name: Wander
+  m_EditorClassIdentifier: 
+  preOrderIndex: 7
+  nodePosition: {x: 218, y: 480}
+  status: 0
+  EditorStatus: 0
+--- !u!114 &1109209989540322495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6006b11dc7a44656a78362ef0df73a71, type: 3}
+  m_Name: BTSequence
+  m_EditorClassIdentifier: 
+  preOrderIndex: 1
+  nodePosition: {x: -38, y: 100}
+  status: 0
+  EditorStatus: 0
+  children:
+  - {fileID: -7418319599595361006}
+  - {fileID: -3633643284604580192}
+  currentChildIndex: 0
+--- !u!114 &2001572907887549615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc4124a843ebc94da52100f41cc389d, type: 3}
+  m_Name: HasAttackTarget
+  m_EditorClassIdentifier: 
+  preOrderIndex: 6
+  nodePosition: {x: 12, y: 480}
+  status: 0
+  EditorStatus: 0
+  child: {fileID: 0}
+  invert: 1
+--- !u!114 &7151410168465214406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c18d1020e5c400abc9d2d71059b534f, type: 3}
+  m_Name: BTWait
+  m_EditorClassIdentifier: 
+  preOrderIndex: 8
+  nodePosition: {x: 422, y: 478}
+  status: 0
+  EditorStatus: 0
+  duration: 5
+--- !u!114 &8265403067773379634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f1188ad8b7e2f4889917e3e1886413, type: 3}
+  m_Name: EntityIsAlive
+  m_EditorClassIdentifier: 
+  preOrderIndex: 4
+  nodePosition: {x: -192, y: 480}
+  status: 0
+  EditorStatus: 0
+  child: {fileID: 0}
+  invert: 0
+--- !u!114 &8923136194041605466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eed14681cc98e44bb4a2765eaf8124a, type: 3}
+  m_Name: EntityExists
+  m_EditorClassIdentifier: 
+  preOrderIndex: 3
+  nodePosition: {x: -398, y: 480}
+  status: 0
+  EditorStatus: 0
+  child: {fileID: 0}
+  invert: 0
