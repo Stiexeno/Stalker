@@ -1,10 +1,11 @@
 using Animancer;
+using Framework;
 using UnityEngine;
 using SF = UnityEngine.SerializeField;
 
 namespace Roguelite
 {
-    public class MovementAnimationComponent : MonoBehaviour, IEntityComponent
+    public class MovementAnimationComponent : MonoBehaviour, IEntityComponent, IProcessable
     {
         // Serialized fields
         
@@ -69,10 +70,6 @@ namespace Roguelite
 		    parameter += Mathf.RoundToInt(velocity.magnitude) * 4f;
             
 		    movementTransition.State.Parameter = parameter;
-	    }
-
-	    public void Setup()
-	    {
 	    }
     }
 }

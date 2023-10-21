@@ -1,9 +1,10 @@
+using Framework;
 using UnityEngine;
 using SF = UnityEngine.SerializeField;
 
 namespace Roguelite
 {
-    public class PlayerInputComponent : MonoBehaviour, IEntityInputComponent
+    public class PlayerInputComponent : MonoBehaviour, IEntityInputComponent, IProcessable
     {
 	    // Serialized fields
 	
@@ -29,10 +30,6 @@ namespace Roguelite
 	    {
 		    LookDirection = context.input.aiming.value;
 		    Velocity = context.input.movement.value;
-	    }
-
-	    public void Setup()
-	    {
 	    }
     }
 }

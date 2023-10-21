@@ -6,7 +6,7 @@ using SF = UnityEngine.SerializeField;
 
 namespace Roguelite
 {
-    public class RangedWeaponComponent : MonoBehaviour, IEntityComponent, IShotListener, IReloadingListener
+    public class RangedWeaponComponent : MonoBehaviour, IEntityComponent, IProcessable, IShotListener, IReloadingListener
     {
         // Serialized fields
         
@@ -55,10 +55,6 @@ namespace Roguelite
 		    entity.AddReloadingListener(this);
 		    
 		    inputComponent = GetComponentInParent<IEntityInputComponent>();
-	    }
-	    
-	    public void Setup()
-	    {
 	    }
 
 	    public void Process(in float deltaTime)

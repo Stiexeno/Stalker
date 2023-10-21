@@ -54,7 +54,7 @@ public class WeaponSystem : IExecuteSystem
 		var spreadDirection = Quaternion.AngleAxis(spread, Vector3.forward) * direction;
 		
 		bullet.Entity.ReplaceDirection(spreadDirection);
-		bullet.Setup();
+		bullet.Reuse();
         
 		weaponEntity.isShot = true;
 		weaponOwner.isShot = true;

@@ -37,11 +37,6 @@ namespace Roguelite
 		    OnProcess(deltaTime);
 	    }
 
-	    public void Setup()
-	    {
-		    OnSetup();
-	    }
-
 	    protected virtual void OnEnable()
 	    {
 	    }

@@ -34,14 +34,6 @@ namespace Roguelite
 			entity = entityView.Entity;
 		}
 
-		public void Setup()
-		{
-		}
-
-		public void Process(in float deltaTime)
-		{
-		}
-		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			TriggerBy(other);

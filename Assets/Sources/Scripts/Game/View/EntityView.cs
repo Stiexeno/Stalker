@@ -65,15 +65,21 @@ namespace Roguelite
 		{
 			foreach (var behaviour in behaviours)
 			{
-				behaviour.Process(deltaTime);
+				if (behaviour is IProcessable processable)
+				{
+					processable.Process(deltaTime);
+				}
 			}
 		}
 
-		public void Setup()
+		public void Reuse()
 		{
 			foreach (var behaviour in behaviours)
 			{
-				behaviour.Setup();
+				if (behaviour is IReusable reusable)
+				{
+					reusable.Reuse();
+				}
 			}
 		}
 

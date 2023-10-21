@@ -6,6 +6,8 @@ namespace Roguelite
     public class MovementComponent : MonoBehaviour, IEntityComponent
     {
         // Serialized fields
+
+        [SF] private float speed = 100f;
 	
     	// Private fields
 
@@ -19,17 +21,9 @@ namespace Roguelite
 	    {
 		    rb = entityView.GetComponent<Rigidbody2D>();
 		    
-		    entityView.Entity.AddMovementSpeed(100f);
+		    entityView.Entity.AddMovementSpeed(speed);
 		    entityView.Entity.AddDirection(Vector2.zero);
 		    entityView.Entity.AddRigidbody(rb);
-	    }
-
-	    public void Process(in float deltaTime)
-	    {
-	    }
-
-	    public void Setup()
-	    {
 	    }
     }
 }

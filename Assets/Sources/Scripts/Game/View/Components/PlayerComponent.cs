@@ -17,13 +17,5 @@ namespace Roguelite
 	    {
 		    entityView.Entity.isPlayer = true;
 	    }
-
-	    public void Process(in float deltaTime)
-	    {
-	    }
-
-	    public void Setup()
-	    {
-	    }
     }
 }
