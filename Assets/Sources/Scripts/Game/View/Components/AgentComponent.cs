@@ -1,6 +1,6 @@
 using Framework;
+using Framework.Bot.ECS;
 using Roguelite;
-using Roguelite.Bot;
 using UnityEngine;
 using UnityEngine.AI;
 using SF = UnityEngine.SerializeField;

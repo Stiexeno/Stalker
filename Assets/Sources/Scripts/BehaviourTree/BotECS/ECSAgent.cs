@@ -2,7 +2,7 @@ using Framework.GraphView;
 
 namespace Framework.Bot.ECS
 {
-    public class EcsAgent : BTAgent
+    public class ECSAgent : BTAgent
     {
         private ECSParams _ecsParams;
         private Contexts _contexts;

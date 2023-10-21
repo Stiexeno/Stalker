@@ -1,7 +1,7 @@
 using DG.Tweening;
 using Framework;
+using Framework.Bot.ECS;
 using Framework.Generated;
-using Roguelite.Bot;
 using UnityEngine;
 using UnityEngine.AI;
 using SF = UnityEngine.SerializeField;
