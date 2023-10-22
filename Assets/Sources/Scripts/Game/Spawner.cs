@@ -1,4 +1,5 @@
 using Framework;
+using Framework.Utils;
 using UnityEngine;
 using SF = UnityEngine.SerializeField;
 
@@ -17,7 +18,10 @@ namespace Roguelite
 	    [Inject]
 	    private void Construct(ICharacterFactory characterFactory)
 	    {
-		   characterFactory.CreateEnemy(transform.position);
+		   Async.Delay(1, () =>
+		   {
+			   characterFactory.CreateEnemy(transform.position);
+		   });
 	    }
     }
 }

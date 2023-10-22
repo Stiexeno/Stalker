@@ -8,6 +8,7 @@ namespace Framework.Generated
 			public const string Rifle_Hit_Blood = "Effects/Rifle_Hit_Blood";
 			public const string Effect_Bullet_Drop = "Effects/Effect_Bullet_Drop";
 			public const string Effects_Shoot = "Effects/Effects_Shoot";
+			public const string Effect_Walk_Trail = "Effects/Effect_Walk_Trail";
 		}
 
 		public static class Input
@@ -24,6 +25,7 @@ namespace Framework.Generated
 		public static class Weapons
 		{
 			public const string Weapon_Rifle = "Weapons/Weapon_Rifle";
+			public const string Weapon_Sword = "Weapons/Weapon_Sword";
 		}
 
 		public static class Projectiles

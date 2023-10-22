@@ -16,7 +16,6 @@ namespace Roguelite
         [SF] private Transform shootingPoint;
         [SF] private Transform weaponHolder;
         [SF] private SpriteRenderer weaponRenderer;
-        [SF] private SpriteRenderer muzzleFlash;
         [SF] private Sprite horiznotalSprite;
         [SF] private Sprite verticalSprite;
         
@@ -50,6 +49,7 @@ namespace Roguelite
 		    entity.AddMaxAmmo(maxAmmo);
 		    entity.AddFireRate(fireRate);
 		    entity.AddShootingPoint(shootingPoint);
+		    entity.isRangedWeapon = true;
 			
 		    entity.AddShotListener(this);
 		    entity.AddReloadingListener(this);
@@ -103,8 +103,6 @@ namespace Roguelite
         
 	    public void OnShot(GameEntity entity)
 	    {
-		    muzzleFlash.DOKill(true);
-			
 		   //muzzleFlash.sprite = muzzleFlashes.RandomResult();
 		   //muzzleFlash.DOFade(1f, 0.03f).OnComplete(() =>
 		   //{

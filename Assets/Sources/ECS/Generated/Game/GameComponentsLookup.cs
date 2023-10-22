@@ -46,34 +46,39 @@ public static class GameComponentsLookup {
     public const int Lifetime = 35;
     public const int MaxAmmo = 36;
     public const int MaxHealth = 37;
-    public const int MovementSpeed = 38;
-    public const int NodeStatus = 39;
-    public const int OwnerId = 40;
-    public const int Player = 41;
-    public const int Poolable = 42;
-    public const int Pooled = 43;
-    public const int PooledListener = 44;
-    public const int Projectile = 45;
-    public const int Reloaded = 46;
-    public const int ReloadedListener = 47;
-    public const int Reloading = 48;
-    public const int ReloadingCooldown = 49;
-    public const int ReloadingEntity = 50;
-    public const int ReloadingListener = 51;
-    public const int Rigidbody = 52;
-    public const int SentToPool = 53;
-    public const int ShootingCooldown = 54;
-    public const int ShootingPoint = 55;
-    public const int Shot = 56;
-    public const int ShotListener = 57;
-    public const int TargetId = 58;
-    public const int Team = 59;
-    public const int Transform = 60;
-    public const int WeaponAdded = 61;
-    public const int WeaponAddedListener = 62;
-    public const int Weapon = 63;
+    public const int MeleeWeapon = 38;
+    public const int MovementSpeed = 39;
+    public const int NodeStatus = 40;
+    public const int OwnerId = 41;
+    public const int Player = 42;
+    public const int Poolable = 43;
+    public const int Pooled = 44;
+    public const int PooledListener = 45;
+    public const int Projectile = 46;
+    public const int RangedWeapon = 47;
+    public const int Reloaded = 48;
+    public const int ReloadedListener = 49;
+    public const int Reloading = 50;
+    public const int ReloadingCooldown = 51;
+    public const int ReloadingEntity = 52;
+    public const int ReloadingListener = 53;
+    public const int Rigidbody = 54;
+    public const int SentToPool = 55;
+    public const int ShootingCooldown = 56;
+    public const int ShootingPoint = 57;
+    public const int Shot = 58;
+    public const int ShotListener = 59;
+    public const int TargetId = 60;
+    public const int TargetPosition = 61;
+    public const int Team = 62;
+    public const int Timelapsed = 63;
+    public const int Transform = 64;
+    public const int Wander = 65;
+    public const int WeaponAdded = 66;
+    public const int WeaponAddedListener = 67;
+    public const int Weapon = 68;
 
-    public const int TotalComponents = 64;
+    public const int TotalComponents = 69;
 
     public static readonly string[] componentNames = {
         "Agent",
@@ -114,6 +119,7 @@ public static class GameComponentsLookup {
         "Lifetime",
         "MaxAmmo",
         "MaxHealth",
+        "MeleeWeapon",
         "MovementSpeed",
         "NodeStatus",
         "OwnerId",
@@ -122,6 +128,7 @@ public static class GameComponentsLookup {
         "Pooled",
         "PooledListener",
         "Projectile",
+        "RangedWeapon",
         "Reloaded",
         "ReloadedListener",
         "Reloading",
@@ -135,8 +142,11 @@ public static class GameComponentsLookup {
         "Shot",
         "ShotListener",
         "TargetId",
+        "TargetPosition",
         "Team",
+        "Timelapsed",
         "Transform",
+        "Wander",
         "WeaponAdded",
         "WeaponAddedListener",
         "Weapon"
@@ -181,6 +191,7 @@ public static class GameComponentsLookup {
         typeof(Lifetime),
         typeof(MaxAmmo),
         typeof(MaxHealth),
+        typeof(MeleeWeapon),
         typeof(MovementSpeed),
         typeof(NodeStatus),
         typeof(OwnerId),
@@ -189,6 +200,7 @@ public static class GameComponentsLookup {
         typeof(Pooled),
         typeof(PooledListenerComponent),
         typeof(Projectile),
+        typeof(RangedWeapon),
         typeof(Reloaded),
         typeof(ReloadedListenerComponent),
         typeof(Reloading),
@@ -202,8 +214,11 @@ public static class GameComponentsLookup {
         typeof(Shot),
         typeof(ShotListenerComponent),
         typeof(TargetId),
+        typeof(TargetPosition),
         typeof(Team),
+        typeof(Timelapsed),
         typeof(TransformComponent),
+        typeof(Wander),
         typeof(WeaponAdded),
         typeof(WeaponAddedListenerComponent),
         typeof(WeaponComponent)

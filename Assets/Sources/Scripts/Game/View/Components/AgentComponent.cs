@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using SF = UnityEngine.SerializeField;
 
 [RequireComponent(typeof(ECSAgent), typeof(NavMeshAgent))]
-public class AgentComponent : MonoBehaviour, IEntityInputComponent, IProcessable
+public class AgentComponent : MonoBehaviour, IEntityInputComponent, IProcessable, IDeadListener
 {
     // Serialized fields
 	
@@ -34,6 +34,8 @@ public class AgentComponent : MonoBehaviour, IEntityInputComponent, IProcessable
 		ecsAgent.Setup(entityView.Entity, entityView.Context);
 		agent.updateRotation = false;
 		agent.updateUpAxis = false;
+		
+		entity.AddDeadListener(this);
 	}
 
 	public void Process(in float deltaTime)
@@ -42,5 +44,12 @@ public class AgentComponent : MonoBehaviour, IEntityInputComponent, IProcessable
 		
 		LookDirection = entity.direction.value;
 		Velocity = entity.direction.value;
+	}
+
+	public void OnDead(GameEntity entity)
+	{
+		agent.enabled = false;
+		this.entity.direction.value = Vector2.zero;
+		ecsAgent.Disable();
 	}
 }

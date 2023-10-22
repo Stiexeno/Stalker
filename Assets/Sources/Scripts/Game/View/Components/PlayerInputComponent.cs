@@ -14,7 +14,7 @@ namespace Roguelite
 	    private Contexts context;
 
 	    // Properties
-	    
+        
 	    public Vector2 LookDirection { get; set; }
 	    public Vector2 Velocity { get; set; }
 	

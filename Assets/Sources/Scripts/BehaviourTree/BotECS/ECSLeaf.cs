@@ -5,6 +5,7 @@ namespace Framework.Bot.ECS
 	public abstract class ECSLeaf : BTLeaf, IECSNode
 	{
 		// Private fields
+		
 		protected GameEntity nodeEntity;
 		protected GameEntity ownerEntity;
 		protected GameContext gameContext;
@@ -18,18 +19,20 @@ namespace Framework.Bot.ECS
 		public void Initialize(ECSParams ecsParams)
 		{
 			this.ecsParams = ecsParams;
-			
+
 			ownerEntity = ecsParams.entity;
 			gameContext = ecsParams.contexts.game;
 
 			nodeEntity = gameContext.CreateEntity();
 
 			nodeEntity.AddOwnerId(ownerEntity.id.value);
-			
+
 			OnInit();
 		}
 
-		protected virtual void OnInit() { }
+		protected virtual void OnInit()
+		{
+		}
 
 
 		/// <summary>
@@ -38,7 +41,7 @@ namespace Framework.Bot.ECS
 		protected sealed override void OnEnter()
 		{
 			nodeEntity.ReplaceNodeStatus(BTStatus.Running);
-			
+
 			Enter();
 		}
 
@@ -53,16 +56,33 @@ namespace Framework.Bot.ECS
 			if (!entity.hasNodeStatus)
 				return BTStatus.Running;
 
-			BTStatus updateResultStatus = Update();
-			
+			BTStatus updateResultStatus = nodeEntity.nodeStatus.value;
+
 			if (updateResultStatus == BTStatus.Success)
+			{
+				OnSuccess();
 				nodeEntity.ReplaceNodeStatus(BTStatus.Inactive);
-			
+			}
+			else if (updateResultStatus == BTStatus.Failure)
+			{
+				OnFailure();
+				nodeEntity.ReplaceNodeStatus(BTStatus.Inactive);
+			}
+
 			return updateResultStatus;
 		}
 
 
-		protected virtual void Enter() { }
-		protected abstract BTStatus Update();
+		protected virtual void Enter()
+		{
+		}
+
+		protected virtual void OnSuccess()
+		{
+		}
+
+		protected virtual void OnFailure()
+		{
+		}
 	}
 }

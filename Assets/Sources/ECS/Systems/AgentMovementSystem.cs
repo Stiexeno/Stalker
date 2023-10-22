@@ -15,7 +15,8 @@ public class AgentMovementSystem : IExecuteSystem
 				GameMatcher.Enemy, 
 				GameMatcher.Transform,
 				GameMatcher.Agent,
-				GameMatcher.Direction));
+				GameMatcher.Direction).
+			NoneOf(GameMatcher.Dead));
 	}
 
 	public void Execute()

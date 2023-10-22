@@ -6,5 +6,6 @@ namespace Roguelite
     {
         EntityView CreateRifle(Transform parent, GameEntity owner);
         EntityView CreateBullet();
+        EntityView CreateSword(Transform parent, GameEntity owner);
     }
 }

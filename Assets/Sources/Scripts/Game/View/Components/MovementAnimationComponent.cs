@@ -40,8 +40,20 @@ namespace Roguelite
 
 	    public void Process(in float deltaTime)
 	    {
+		    if (entity.isDead == true)
+			    return;
+		    
 		    var aimingDirection = input.LookDirection;
 		    var velocity = input.Velocity;
+
+		    if (velocity.magnitude == 0f && aimingDirection.magnitude == 0f)
+		    {
+			    if (movementTransition.State.Parameter >= 4)
+			    {
+				    movementTransition.State.Parameter -= 4;   
+			    }
+			    return;
+		    }
             
 		    float angle = Mathf.Atan2(aimingDirection.y, aimingDirection.x) * Mathf.Rad2Deg;
 		    Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);

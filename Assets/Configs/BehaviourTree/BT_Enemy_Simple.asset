@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BTSequence
   m_EditorClassIdentifier: 
   preOrderIndex: 2
-  nodePosition: {x: -292, y: 290}
+  nodePosition: {x: -292, y: 270}
   status: 0
   children:
   - {fileID: 8923136194041605466}
@@ -32,10 +32,25 @@ MonoBehaviour:
   m_Name: BTRoot
   m_EditorClassIdentifier: 
   preOrderIndex: 0
-  nodePosition: {x: 0, y: 0}
+  nodePosition: {x: -50, y: -20}
   status: 0
   child: {fileID: 1109209989540322495}
   invert: 0
+--- !u!114 &-5312648381250749589
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d0c951fa776cd4cb8e3dc90d51d878, type: 3}
+  m_Name: WanderNode
+  m_EditorClassIdentifier: 
+  preOrderIndex: 6
+  nodePosition: {x: 15, y: 460}
+  status: 0
 --- !u!114 &-3633643284604580192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,11 +64,10 @@ MonoBehaviour:
   m_Name: BTSequence
   m_EditorClassIdentifier: 
   preOrderIndex: 5
-  nodePosition: {x: 218, y: 290}
+  nodePosition: {x: 118, y: 270}
   status: 0
   children:
-  - {fileID: 0}
-  - {fileID: 873392341565932023}
+  - {fileID: -5312648381250749589}
   - {fileID: 7151410168465214406}
   currentChildIndex: 0
 --- !u!114 &-1623591228530053251
@@ -87,12 +101,11 @@ MonoBehaviour:
   - {fileID: 8923136194041605466}
   - {fileID: 8265403067773379634}
   - {fileID: -3633643284604580192}
-  - {fileID: 0}
-  - {fileID: 873392341565932023}
+  - {fileID: -5312648381250749589}
   - {fileID: 7151410168465214406}
   blackboard: {fileID: -1623591228530053251}
   unusedNodes: []
-  panPosition: {x: -81, y: -270}
+  panPosition: {x: 9, y: -327}
   zoomPosition: {x: 1, y: 1}
   root: {fileID: -5469422950342547511}
 --- !u!114 &873392341565932023
@@ -107,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d0c951fa776cd4cb8e3dc90d51d878, type: 3}
   m_Name: Wander
   m_EditorClassIdentifier: 
-  preOrderIndex: 7
+  preOrderIndex: 6
   nodePosition: {x: 218, y: 480}
   status: 0
 --- !u!114 &1109209989540322495
@@ -123,7 +136,7 @@ MonoBehaviour:
   m_Name: BTSequence
   m_EditorClassIdentifier: 
   preOrderIndex: 1
-  nodePosition: {x: -38, y: 100}
+  nodePosition: {x: -88, y: 80}
   status: 0
   children:
   - {fileID: -7418319599595361006}
@@ -141,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c18d1020e5c400abc9d2d71059b534f, type: 3}
   m_Name: BTWait
   m_EditorClassIdentifier: 
-  preOrderIndex: 8
-  nodePosition: {x: 422, y: 478}
+  preOrderIndex: 7
+  nodePosition: {x: 220, y: 460}
   status: 0
   duration: 5
 --- !u!114 &8265403067773379634
@@ -158,7 +171,7 @@ MonoBehaviour:
   m_Name: EntityIsAlive
   m_EditorClassIdentifier: 
   preOrderIndex: 4
-  nodePosition: {x: -192, y: 480}
+  nodePosition: {x: -190, y: 460}
   status: 0
   child: {fileID: 0}
   invert: 0
@@ -175,7 +188,7 @@ MonoBehaviour:
   m_Name: EntityExists
   m_EditorClassIdentifier: 
   preOrderIndex: 3
-  nodePosition: {x: -398, y: 480}
+  nodePosition: {x: -395, y: 460}
   status: 0
   child: {fileID: 0}
   invert: 0

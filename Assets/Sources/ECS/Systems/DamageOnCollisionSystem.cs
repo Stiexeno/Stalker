@@ -13,10 +13,12 @@ public class DamageOnCollisionSystem : IExecuteSystem
 		this.contexts = contexts;
 
 		damagedEntities = contexts.game.GetGroup(GameMatcher
-			.AllOf(GameMatcher.Collided, GameMatcher.Damage));
+			.AllOf(GameMatcher.Collided, GameMatcher.Damage)
+			.NoneOf(GameMatcher.Dead));
 		
 		collisions = contexts.game.GetGroup(GameMatcher
-			.AllOf( GameMatcher.CollisionEvent, GameMatcher.OwnerId, GameMatcher.CollisionId));
+			.AllOf( GameMatcher.CollisionEvent, GameMatcher.OwnerId, GameMatcher.CollisionId)
+			.NoneOf(GameMatcher.Dead));
 	}
 
 	public void Execute()
@@ -26,7 +28,7 @@ public class DamageOnCollisionSystem : IExecuteSystem
 			GameEntity collidedDamageEntity = damagedEntities.GetEntity(contexts.game, collisionEventEntity.ownerId.value);
 			GameEntity collisionEntity = contexts.game.GetEntityWithId(collisionEventEntity.collisionId.value);
 			
-			if (collidedDamageEntity == null || collisionEntity == null || collisionEntity.IsSameTeam(collidedDamageEntity))
+			if (collidedDamageEntity == null || collisionEntity == null || collisionEntity.isDead || collisionEntity.IsSameTeam(collidedDamageEntity))
 				continue;
 
 			contexts.game.DealDamage(collisionEntity, collidedDamageEntity, collidedDamageEntity.damage.value);

@@ -15,6 +15,7 @@ public class TargetId : IComponent { public int value; }
 public class Duration : IComponent { public float value; }
 public class DurationLeft : IComponent { public float value; }
 public class DurationUp : IComponent {  }
+public class Timelapsed : IComponent {  public float value; }
 
 public class Poolable : IComponent {  }
 public class SentToPool : IComponent {  }
@@ -43,10 +44,13 @@ public class TransformComponent : IComponent {  public Transform value; }
 public class Direction : IComponent { public Vector2 value; }
 public class MovementSpeed : IComponent { public float value; }
 public class Rigidbody : IComponent { public Rigidbody2D value; }
+public class TargetPosition : IComponent { public Vector3 value; }
 
 // Weapon
 
 public class WeaponComponent : IComponent { }
+public class RangedWeapon : IComponent { }
+public class MeleeWeapon : IComponent { }
 public class CurrentWeapon : IComponent { public GameEntity value; }
 public class ShootingPoint : IComponent { public Transform value; }
 public class Projectile : IComponent { }
@@ -73,6 +77,9 @@ public sealed class CollisionContactPointComponent : IComponent { public Contact
 // AI
 
 public class NodeStatus : IComponent { public BTStatus value; }
+
+public class Wander : IComponent { }
+
 
 // Events
 

@@ -4,20 +4,20 @@ using Framework.Utils;
 using Roguelite;
 using UnityEngine;
 
-public class WeaponSystem : IExecuteSystem
+public class RangedWeaponSystem : IExecuteSystem
 {
 	private readonly Contexts contexts;
 	private IGroup<GameEntity> weaponEntities;
 	private IGroup<GameEntity> pooledProjectiles;
 	private IWeaponFactory weaponFactory;
 
-	public WeaponSystem(Contexts contexts, IWeaponFactory weaponFactory)
+	public RangedWeaponSystem(Contexts contexts, IWeaponFactory weaponFactory)
 	{
 		this.weaponFactory = weaponFactory;
 		this.contexts = contexts;
 
 		weaponEntities = contexts.game.GetGroup(GameMatcher
-			.AllOf(GameMatcher.Weapon)
+			.AllOf(GameMatcher.Weapon, GameMatcher.RangedWeapon)
 			.NoneOf(GameMatcher.ShootingCooldown, GameMatcher.Reloading));
 
 		pooledProjectiles = contexts.game.GetGroup(GameMatcher

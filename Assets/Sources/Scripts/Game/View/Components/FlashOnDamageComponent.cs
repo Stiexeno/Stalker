@@ -5,6 +5,7 @@ using Roguelite;
 using UnityEngine;
 using SF = UnityEngine.SerializeField;
 
+[RequireComponent(typeof(HealthComponent))]
 public class FlashOnDamageComponent : MonoBehaviour, IEntityComponent, IDamageReceivedFromAttackerListener
 {
     // Serialized fields
