@@ -75,7 +75,7 @@ namespace Roguelite
 		{
 			var createdPlayer = characterFactory.CreatePlayer(Vector2.zero);
 			this.player.CreatePlayer(createdPlayer);
-			weaponFactory.CreateRifle(player.EntityView.transform, player.EntityView.Entity);
+			weaponFactory.CreateSword(player.EntityView.transform, player.EntityView.Entity);
 		}
 	}
 }

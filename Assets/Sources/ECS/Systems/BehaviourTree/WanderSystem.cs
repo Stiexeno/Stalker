@@ -33,6 +33,9 @@ public class WanderSystem : IExecuteSystem
 
 			if (IsReachedTargetPosition(ownerEntity, nodeEntity.targetPosition.value) || nodeEntity.timelapsed.value > 5)
 			{
+				if (ownerEntity.agent.value.enabled == false)
+					continue;
+				
 				ownerEntity.agent.value.isStopped = true;
 				nodeEntity.isWander = false;
 				nodeEntity.ReplaceNodeStatus(BTStatus.Success);

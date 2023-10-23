@@ -9,6 +9,7 @@ namespace Framework.Generated
 			public const string Effect_Bullet_Drop = "Effects/Effect_Bullet_Drop";
 			public const string Effects_Shoot = "Effects/Effects_Shoot";
 			public const string Effect_Walk_Trail = "Effects/Effect_Walk_Trail";
+			public const string Effect_Hit = "Effects/Effect_Hit";
 		}
 
 		public static class Input
