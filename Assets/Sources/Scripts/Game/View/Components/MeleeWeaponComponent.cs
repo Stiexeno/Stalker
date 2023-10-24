@@ -1,6 +1,8 @@
+using Animancer;
 using Framework;
 using Roguelite;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using SF = UnityEngine.SerializeField;
 
 public class MeleeWeaponComponent : MonoBehaviour, IEntityComponent, IProcessable
@@ -10,15 +12,24 @@ public class MeleeWeaponComponent : MonoBehaviour, IEntityComponent, IProcessabl
     [SF] private Transform weaponHolder;
     [SF] private Transform weaponRenderer;
     [SF] private AnimationCurve rotationCurve;
+    
+    [SF] private SoloAnimation clip;
 	
 	// Private fields
 	
 	private IEntityInputComponent inputComponent;
 	private bool facingRight = true;
-	
+	private PlayerInput playerInput;
+	private InputAction attackInput;
+
 	// Properties
 	
 	//MeleeWeaponComponent
+	[Inject]
+	private void Construct(PlayerInput playerInput)
+	{
+		this.playerInput = playerInput;
+	}
 	
 	public void Initialize(EntityView entityView)
 	{
@@ -28,6 +39,7 @@ public class MeleeWeaponComponent : MonoBehaviour, IEntityComponent, IProcessabl
 		entity.AddDirection(Vector3.zero);
 		
 		inputComponent = GetComponentInParent<IEntityInputComponent>();
+		attackInput = playerInput.actions[Constants.Input.Actions.Attack];
 	}
 
 	public void Process(in float deltaTime)
@@ -80,5 +92,10 @@ public class MeleeWeaponComponent : MonoBehaviour, IEntityComponent, IProcessabl
 
 		var weaponPosition = Mathf.Lerp(-4, 0, transform.right.y);
 		weaponRenderer.transform.localPosition = new Vector3(weaponRenderer.transform.localPosition.x, weaponRenderer.transform.localPosition.y, weaponPosition);
+
+		if (attackInput.IsPressed())
+		{
+			clip.Play();
+		}
 	}
 }
