@@ -145,8 +145,8 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 1
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensity: 0.166
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 8647185116280481477}
   - component: {fileID: 9052574744545564744}
   - component: {fileID: 4506243607060951138}
+  - component: {fileID: 5724077733407988969}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -480,6 +481,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+--- !u!114 &5724077733407988969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448410925445616190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d9f31a9557d97429360ad0a08c7239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light2d: {fileID: 4859950185807850739}
 --- !u!1 &6815372189171813061
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e243441dad04e43a3175ce9188790f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Animator: {fileID: 8896292191118880683}
+  _Animator: {fileID: 0}
   _ActionOnDisable: 0
 --- !u!95 &8896292191118880683
 Animator:
